@@ -1,5 +1,27 @@
 # CMake skeleton code
 
+## Milestone 5: lid-driven cavity
+
+Build and run the separate Milestone 5 executable with:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target milestone5
+./build/executables/milestone5 milestone5_results
+```
+
+The simulation uses stationary bounce-back on the left, right, and bottom
+walls, and moving-wall bounce-back on the interior of the top lid. It stops
+when the maximum velocity change falls below the convergence limit and writes
+the full field, vertical centerline profile, Reynolds number, runtime, and
+MLUPS performance to `milestone5_results`.
+
+Create the streamline, speed, and centerline plots with:
+
+```bash
+python3 plot_milestone5.py milestone5_results
+```
+
 ## Milestone 4: shear-wave viscosity validation
 
 Build and run the validation with:

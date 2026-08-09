@@ -1,0 +1,11 @@
+grid=128x128
+steps=16600
+omega=1.677852348993289
+viscosity=0.03199999999999999
+lid_velocity=0.1
+reynolds_number=400.0000000000001
+maximum_velocity_change=8.688335506013578e-07
+convergence_runtime_seconds=14.527225093
+benchmark_steps=2000
+benchmark_seconds=1.744862802
+mlups=18.77970002136592

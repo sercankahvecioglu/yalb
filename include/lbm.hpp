@@ -31,6 +31,22 @@ void streaming(
     int Ny
 );
 
+// Streams inside a closed cavity. Populations that hit a boundary bounce back
+// into the opposite channel. The interior of the top wall moves in +x;
+// the two top corner nodes are treated as stationary wall nodes.
+void streaming_with_walls(
+    Kokkos::View<double***> f,
+    Kokkos::View<double***> f_new,
+    Kokkos::View<int*> cx,
+    Kokkos::View<int*> cy,
+    Kokkos::View<int*> opposite,
+    Kokkos::View<double*> weights,
+    int Nx,
+    int Ny,
+    double lid_velocity,
+    double wall_density
+);
+
 double compute_total_mass(
     Kokkos::View<double***> f,
     int Nx,

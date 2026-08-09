@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="600" viewBox="0 0 700 600">
+<rect width="100%" height="100%" fill="white"/>
+<text x="350.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="18">Vertical centreline velocity, Re = 400</text>
+<line x1="80" y1="545" x2="670" y2="545" stroke="black"/>
+<line x1="80" y1="45" x2="80" y2="545" stroke="black"/>
+<line x1="248.57" y1="45" x2="248.57" y2="545" stroke="gray" stroke-dasharray="5 5"/>
+<polyline points="248.57,545.00 246.50,543.05 242.46,539.14 238.60,535.23 234.89,531.33 231.29,527.42 227.77,523.52 224.27,519.61 220.78,515.70 217.28,511.80 213.74,507.89 210.17,503.98 206.53,500.08 202.83,496.17 199.06,492.27 195.21,488.36 191.27,484.45 187.26,480.55 183.16,476.64 179.00,472.73 174.77,468.83 170.51,464.92 166.21,461.02 161.91,457.11 157.62,453.20 153.39,449.30 149.22,445.39 145.17,441.48 141.25,437.58 137.50,433.67 133.97,429.77 130.67,425.86 127.65,421.95 124.93,418.05 122.54,414.14 120.51,410.23 118.86,406.33 117.60,402.42 116.75,398.52 116.31,394.61 116.28,390.70 116.67,386.80 117.46,382.89 118.63,378.98 120.19,375.08 122.09,371.17 124.32,367.27 126.85,363.36 129.66,359.45 132.71,355.55 135.98,351.64 139.44,347.73 143.05,343.83 146.80,339.92 150.66,336.02 154.60,332.11 158.61,328.20 162.66,324.30 166.74,320.39 170.84,316.48 174.95,312.58 179.06,308.67 183.15,304.77 187.24,300.86 191.31,296.95 195.36,293.05 199.39,289.14 203.41,285.23 207.41,281.33 211.40,277.42 215.37,273.52 219.34,269.61 223.31,265.70 227.27,261.80 231.23,257.89 235.20,253.98 239.17,250.08 243.15,246.17 247.14,242.27 251.13,238.36 255.14,234.45 259.16,230.55 263.18,226.64 267.22,222.73 271.26,218.83 275.31,214.92 279.37,211.02 283.42,207.11 287.47,203.20 291.51,199.30 295.54,195.39 299.56,191.48 303.55,187.58 307.52,183.67 311.45,179.77 315.34,175.86 319.19,171.95 322.99,168.05 326.72,164.14 330.40,160.23 334.00,156.33 337.53,152.42 340.97,148.52 344.33,144.61 347.61,140.70 350.80,136.80 353.91,132.89 356.95,128.98 359.95,125.08 362.93,121.17 365.95,117.27 369.06,113.36 372.38,109.45 376.03,105.55 380.19,101.64 385.08,97.73 390.98,93.83 398.22,89.92 407.19,86.02 418.31,82.11 432.01,78.20 448.71,74.30 468.74,70.39 492.31,66.48 519.40,62.58 549.76,58.67 582.78,54.77 617.53,50.86 652.77,46.95 670.00,45.00" fill="none" stroke="#1976d2" stroke-width="3"/>
+<text x="375.0" y="590" text-anchor="middle" font-family="sans-serif">ux / lid velocity</text>
+<text x="22" y="295.0" text-anchor="middle" transform="rotate(-90 22 295.0)" font-family="sans-serif">y / L</text>
+<line x1="80.00" y1="545" x2="80.00" y2="551" stroke="black"/>
+<text x="80.00" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">-0.4</text>
+<line x1="164.29" y1="545" x2="164.29" y2="551" stroke="black"/>
+<text x="164.29" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">-0.2</text>
+<line x1="248.57" y1="545" x2="248.57" y2="551" stroke="black"/>
+<text x="248.57" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">0.0</text>
+<line x1="332.86" y1="545" x2="332.86" y2="551" stroke="black"/>
+<text x="332.86" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">0.2</text>
+<line x1="417.14" y1="545" x2="417.14" y2="551" stroke="black"/>
+<text x="417.14" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">0.4</text>
+<line x1="501.43" y1="545" x2="501.43" y2="551" stroke="black"/>
+<text x="501.43" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">0.6</text>
+<line x1="585.71" y1="545" x2="585.71" y2="551" stroke="black"/>
+<text x="585.71" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">0.8</text>
+<line x1="670.00" y1="545" x2="670.00" y2="551" stroke="black"/>
+<text x="670.00" y="568" text-anchor="middle" font-family="sans-serif" font-size="12">1.0</text>
+<line x1="74" y1="545.00" x2="80" y2="545.00" stroke="black"/>
+<text x="70" y="549.00" text-anchor="end" font-family="sans-serif" font-size="12">0.00</text>
+<line x1="74" y1="420.00" x2="80" y2="420.00" stroke="black"/>
+<text x="70" y="424.00" text-anchor="end" font-family="sans-serif" font-size="12">0.25</text>
+<line x1="74" y1="295.00" x2="80" y2="295.00" stroke="black"/>
+<text x="70" y="299.00" text-anchor="end" font-family="sans-serif" font-size="12">0.50</text>
+<line x1="74" y1="170.00" x2="80" y2="170.00" stroke="black"/>
+<text x="70" y="174.00" text-anchor="end" font-family="sans-serif" font-size="12">0.75</text>
+<line x1="74" y1="45.00" x2="80" y2="45.00" stroke="black"/>
+<text x="70" y="49.00" text-anchor="end" font-family="sans-serif" font-size="12">1.00</text>
+<circle cx="248.57" cy="545.00" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="214.07" cy="517.65" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="209.52" cy="513.75" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="205.00" cy="509.85" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="186.99" cy="494.20" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="146.17" cy="459.05" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="110.65" cy="404.35" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="176.43" cy="318.45" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="200.20" cy="295.00" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="257.57" cy="236.40" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="317.08" cy="177.80" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="371.18" cy="119.20" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="484.12" cy="68.45" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="508.83" cy="64.55" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="536.99" cy="60.60" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="568.17" cy="56.70" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<circle cx="670.00" cy="45.00" r="4" fill="#d32f2f" stroke="white" stroke-width="1"/>
+<line x1="455" y1="65" x2="490" y2="65" stroke="#1976d2" stroke-width="3"/><text x="500" y="70" font-family="sans-serif" font-size="13">LBM simulation</text>
+<circle cx="472" cy="88" r="4" fill="#d32f2f"/><text x="500" y="93" font-family="sans-serif" font-size="13">Ghia et al. (1982)</text>
+<text x="400" y="525" font-family="sans-serif" font-size="12" fill="gray">dashed line: ux = 0</text>
+</svg>

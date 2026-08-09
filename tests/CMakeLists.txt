@@ -14,6 +14,7 @@ set(TEST_SOURCES
         test_hello_world.cpp
         test_streaming.cpp
         test_shear_wave.cpp
+        test_boundaries.cpp
 )
 
 list(APPEND TEST_SOURCES gtest_mpi_main.cpp)

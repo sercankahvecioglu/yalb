@@ -100,6 +100,59 @@ void streaming(
     });
 }
 
+void streaming_with_walls(
+    Kokkos::View<double***> f,
+    Kokkos::View<double***> f_new,
+    Kokkos::View<int*> cx,
+    Kokkos::View<int*> cy,
+    Kokkos::View<int*> opposite,
+    Kokkos::View<double*> weights,
+    int Nx,
+    int Ny,
+    double lid_velocity,
+    double wall_density
+) {
+    constexpr double speed_of_sound_squared = 1.0 / 3.0;
+
+    Kokkos::parallel_for("streaming_with_walls", Nx * Ny,
+        KOKKOS_LAMBDA(const int idx) {
+            const int x = idx / Ny;
+            const int y = idx % Ny;
+
+            for (int i = 0; i < 9; ++i) {
+                const int target_x = x + cx(i);
+                const int target_y = y + cy(i);
+
+                const bool target_is_inside =
+                    target_x >= 0 && target_x < Nx &&
+                    target_y >= 0 && target_y < Ny;
+
+                if (target_is_inside) {
+                    f_new(target_x, target_y, i) = f(x, y, i);
+                    continue;
+                }
+
+                const int reflected_direction = opposite(i);
+                double reflected_population = f(x, y, i);
+
+                const bool hits_moving_lid =
+                    target_y >= Ny && x > 0 && x < Nx - 1;
+
+                if (hits_moving_lid) {
+                    const double direction_dot_wall_velocity =
+                        cx(i) * lid_velocity;
+
+                    reflected_population -=
+                        2.0 * weights(i) * wall_density *
+                        direction_dot_wall_velocity /
+                        speed_of_sound_squared;
+                }
+
+                f_new(x, y, reflected_direction) = reflected_population;
+            }
+        });
+}
+
 void output_fields(
     Kokkos::View<double**> rho,
     Kokkos::View<double**> ux,

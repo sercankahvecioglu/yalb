@@ -1,0 +1,4 @@
+benchmark=Ghia_Ghia_Shin_1982_Re400
+number_of_points=17
+rmse=0.01872275162342223
+maximum_absolute_error=0.04241963812640054
