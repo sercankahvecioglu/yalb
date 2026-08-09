@@ -1,5 +1,28 @@
 # CMake skeleton code
 
+## Milestone 4: shear-wave viscosity validation
+
+Build and run the validation with:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+./build/executables/milestone4 milestone4_results
+```
+
+The optional argument is the output directory. The run verifies the initialized
+density and velocity fields, simulates `omega = 0.6, 0.8, 1.0, 1.2, 1.4`, and
+writes CSV data for plotting. The main outputs are:
+
+- `velocity_profiles.csv`: x-averaged shear-wave profiles at selected times;
+- `amplitude_omega_*.csv`: amplitude decay and `ln|A(t)|`;
+- `viscosity_vs_omega.csv`: measured viscosity, theoretical viscosity, fit
+  coefficients, and relative errors.
+
+Amplitude is measured by projecting the velocity profile onto its initial sine
+mode. The measured viscosity is `-slope / (2*pi/Ny)^2`, while the theoretical
+value is `(1/omega - 1/2)/3`.
+
 This repository contains a [CMake](https://cmake.org/) skeleton for C++ projects. It has provision
 for dependencies on the numerical libraries
 

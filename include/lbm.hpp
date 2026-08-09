@@ -58,6 +58,18 @@ void compute_f_eq(
     Kokkos::View<double*> w
 );
 
+// Initializes f to the D2Q9 equilibrium for rho = 1,
+// ux(y) = epsilon * sin(2*pi*y/Ny), and uy = 0.
+void initialize_shear_wave(
+    Kokkos::View<double***> f,
+    Kokkos::View<int*> cx,
+    Kokkos::View<int*> cy,
+    Kokkos::View<double*> w,
+    int Nx,
+    int Ny,
+    double epsilon
+);
+
 void collision(
     Kokkos::View<double***> f,
     Kokkos::View<double***> f_eq,

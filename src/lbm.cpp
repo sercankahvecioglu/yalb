@@ -2,6 +2,7 @@
 // Created by Sercan Kahvecioğlu on 10.07.2026.
 //
 #include "lbm.hpp"
+#include <Kokkos_MathematicalFunctions.hpp>
 #include <filesystem>
 #include <fstream>
 
@@ -166,6 +167,43 @@ void compute_f_eq(
                 );
         }
     });
+}
+
+void initialize_shear_wave(
+    Kokkos::View<double***> f,
+    Kokkos::View<int*> cx,
+    Kokkos::View<int*> cy,
+    Kokkos::View<double*> w,
+    int Nx,
+    int Ny,
+    double epsilon
+) {
+    Kokkos::View<double**> rho("shear_wave_rho", Nx, Ny);
+    Kokkos::View<double**> ux("shear_wave_ux", Nx, Ny);
+    Kokkos::View<double**> uy("shear_wave_uy", Nx, Ny);
+
+    constexpr double two_pi = 6.283185307179586476925286766559;
+
+    Kokkos::parallel_for(
+        "initialize_shear_wave_macroscopic_fields",
+        Nx * Ny,
+        KOKKOS_LAMBDA(const int idx) {
+            const int x = idx / Ny;
+            const int y = idx % Ny;
+            const double phase = two_pi * static_cast<double>(y) /
+                                 static_cast<double>(Ny);
+
+            rho(x, y) = 1.0;
+            ux(x, y) = epsilon * Kokkos::sin(phase);
+            uy(x, y) = 0.0;
+        }
+    );
+    Kokkos::fence();
+
+    // Reuse the existing D2Q9 equilibrium implementation so that the
+    // initializer and collision step cannot silently use different formulas.
+    compute_f_eq(f, rho, ux, uy, cx, cy, Nx, Ny, w);
+    Kokkos::fence();
 }
 
 void collision(
