@@ -124,6 +124,9 @@ std::vector<double> calculate_velocity_profile(const Lattice& lattice) {
     return profile;
 }
 
+/**
+ * Since it makes inside sin pi/2 = 1, we can just return the value at y = NY/4 to get the amplitude.
+ */
 double calculate_amplitude(const std::vector<double>& profile) {
     return profile[NY / 4];
 }
@@ -135,8 +138,9 @@ bool should_save_profile(int time) {
     return false;
 }
 
+'''Linear Regression Line Fit to find out the'''
 LineFit fit_log_amplitude(const std::vector<double>& amplitudes) {
-    double sum_t = 0.0;
+    double sum_t = 0.0; 
     double sum_log_a = 0.0;
     double sum_t_squared = 0.0;
     double sum_t_log_a = 0.0;

@@ -1,0 +1,26 @@
+y/L = 1.0  → üst hareketli kapak
+y/L = 0.75 → kutunun üst bölgesi
+y/L = 0.50 → kutunun orta yüksekliği
+y/L = 0.25 → kutunun alt bölgesi
+y/L = 0.0  → alt sabit duvar
+
+                    hareketli kapak
+             ─────────────────────→
+             ┌─────────────────────┐
+             │          │          │
+             │          │          │
+             │          │          │
+             │          │          │
+             │          │          │
+             └──────────│──────────┘
+                        ↑
+                     x = L/2
+
+
+yani x imiz sabitken yukari dogru cikiyoruz.
+en asagida hiz sola dogru
+ortalarda sifirlaniyor 
+yukarida tabiki saga dogru cunku kapak saga gidiyor
+
+bu sekilde oku bu grafigi
+
